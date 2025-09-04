@@ -22,7 +22,7 @@ export default function App() {
         <StatusBar style="auto" />
         <View style={estilos.viewLogo}>
           <Image source={require("./assets/dahora.png")} style={estilos.logo} />
-          <Text>Dá Hora Filmes</Text>
+          <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
         </View>
         <View style={estilos.viewBotoes}>
           <Button color="red" title="Buscar Filmes" />
@@ -53,6 +53,11 @@ const estilos = StyleSheet.create({
   logo: {
     width: 128,
     height: 128,
+  },
+  tituloApp: {
+    fontSize: 32,
+    color: "#5451a6",
+    fontFamily: "Monoton",
   },
   viewBotoes: {
     backgroundColor: "#ffcc80",
