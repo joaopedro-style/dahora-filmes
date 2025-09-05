@@ -28,7 +28,12 @@ export default function App() {
           <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
         </View>
         <View style={estilos.viewBotoes}>
-          <Pressable style={estilos.botaoInicial}>
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoInicial,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
             <Ionicons name="search" size={24} color="white" />
             <Text style={estilos.textoBotao}>Buscar Filmes</Text>
           </Pressable>
