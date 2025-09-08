@@ -34,11 +34,29 @@ export default function App() {
               pressed && { backgroundColor: "black" },
             ]}
           >
-            <Ionicons name="search" size={24} color="white" />
+            <Ionicons
+              name="search"
+              size={24}
+              color="white"
+              style={{ marginRight: 8 }}
+            />
             <Text style={estilos.textoBotao}>Buscar Filmes</Text>
           </Pressable>
 
-          <Button title="Favoritos" />
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoInicial,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="star"
+              size={24}
+              color="yellow"
+              style={{ marginRight: 8 }}
+            />
+            <Text style={estilos.textoBotao}>Favoritos</Text>
+          </Pressable>
         </View>
         <View style={estilos.viewRodape}>
           <Button title="Privacidade" />
