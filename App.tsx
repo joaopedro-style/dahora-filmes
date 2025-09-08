@@ -59,8 +59,35 @@ export default function App() {
           </Pressable>
         </View>
         <View style={estilos.viewRodape}>
-          <Button title="Privacidade" />
-          <Button title="Sobre" />
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoRodape,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="lock-closed"
+              size={18}
+              color="white"
+              style={{ marginRight: 7 }}
+            />
+            <Text style={estilos.textoRodape}>Privacidade</Text>
+          </Pressable>
+
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoRodape,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="information-circle"
+              size={18}
+              color="white"
+              style={{ marginRight: 7 }}
+            />
+            <Text style={estilos.textoRodape}>Sobre</Text>
+          </Pressable>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
@@ -71,7 +98,6 @@ export default function App() {
 const estilos = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    paddingHorizontal: 20,
     flex: 1,
     justifyContent: "center",
   },
@@ -81,16 +107,17 @@ const estilos = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    width: 128,
-    height: 128,
+    width: 150,
+    height: 150,
+    marginBottom: 10,
   },
   tituloApp: {
     fontSize: 32,
     color: "#5451a6",
     fontFamily: "Monoton",
+    textAlign: "center",
   },
   viewBotoes: {
-    backgroundColor: "#ffcc80",
     flex: 2,
     flexDirection: "row",
     justifyContent: "space-evenly",
@@ -98,19 +125,33 @@ const estilos = StyleSheet.create({
   },
   botaoInicial: {
     backgroundColor: "#5451a6",
-    padding: 16,
-    borderRadius: 8,
+    paddingVertical: 20,
+    paddingHorizontal: 16,
+    borderRadius: 10,
     flexDirection: "row",
     alignItems: "center",
   },
   textoBotao: {
     color: "white",
+    fontSize: 16,
   },
   viewRodape: {
-    backgroundColor: "#ef9a9a",
+    backgroundColor: "#5451a6",
     flex: 0.5,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    paddingHorizontal: 15,
+  },
+  botaoRodape: {
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  textoRodape: {
+    color: "white",
+    fontSize: 14,
   },
 });
