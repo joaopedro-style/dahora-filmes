@@ -137,11 +137,14 @@ const estilos = StyleSheet.create({
   },
   viewRodape: {
     backgroundColor: "#5451a6",
-    flex: 0.5,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 15,
+    borderRadius: 10,
+    paddingHorizontal: 7,
+    paddingVertical: 12,
+    marginBottom: 12,
+    padding: 7,
   },
   botaoRodape: {
     paddingVertical: 14,
