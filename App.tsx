@@ -32,7 +32,6 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={estilos.container}>
-        <StatusBar style="auto" />
         <View style={estilos.viewLogo}>
           <Image source={require("./assets/dahora.png")} style={estilos.logo} />
           <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
