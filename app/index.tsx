@@ -3,77 +3,85 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 // @ts-ignore
 import { Ionicons } from "@expo/vector-icons";
+import { Stack } from "expo-router";
 
 export default function index() {
   return (
-    <SafeAreaView style={estilos.container}>
-      <View style={estilos.viewLogo}>
-        <Image source={require("../assets/dahora.png")} style={estilos.logo} />
-        <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
-      </View>
-      <View style={estilos.viewBotoes}>
-        <Pressable
-          style={({ pressed }) => [
-            estilos.botaoInicial,
-            pressed && { backgroundColor: "black" },
-          ]}
-        >
-          <Ionicons
-            name="search"
-            size={24}
-            color="white"
-            style={{ marginRight: 8 }}
-          />
-          <Text style={estilos.textoBotao}>Buscar Filmes</Text>
-        </Pressable>
+    <>
+      <Stack.Screen options={{ headerShown: false }} />
 
-        <Pressable
-          style={({ pressed }) => [
-            estilos.botaoInicial,
-            pressed && { backgroundColor: "black" },
-          ]}
-        >
-          <Ionicons
-            name="star"
-            size={24}
-            color="yellow"
-            style={{ marginRight: 8 }}
+      <SafeAreaView style={estilos.container}>
+        <View style={estilos.viewLogo}>
+          <Image
+            source={require("../assets/dahora.png")}
+            style={estilos.logo}
           />
-          <Text style={estilos.textoBotao}>Favoritos</Text>
-        </Pressable>
-      </View>
-      <View style={estilos.viewRodape}>
-        <Pressable
-          style={({ pressed }) => [
-            estilos.botaoRodape,
-            pressed && { backgroundColor: "black" },
-          ]}
-        >
-          <Ionicons
-            name="lock-closed"
-            size={18}
-            color="white"
-            style={{ marginRight: 7 }}
-          />
-          <Text style={estilos.textoRodape}>Privacidade</Text>
-        </Pressable>
+          <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
+        </View>
+        <View style={estilos.viewBotoes}>
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoInicial,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="search"
+              size={24}
+              color="white"
+              style={{ marginRight: 8 }}
+            />
+            <Text style={estilos.textoBotao}>Buscar Filmes</Text>
+          </Pressable>
 
-        <Pressable
-          style={({ pressed }) => [
-            estilos.botaoRodape,
-            pressed && { backgroundColor: "black" },
-          ]}
-        >
-          <Ionicons
-            name="information-circle"
-            size={18}
-            color="white"
-            style={{ marginRight: 7 }}
-          />
-          <Text style={estilos.textoRodape}>Sobre</Text>
-        </Pressable>
-      </View>
-    </SafeAreaView>
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoInicial,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="star"
+              size={24}
+              color="yellow"
+              style={{ marginRight: 8 }}
+            />
+            <Text style={estilos.textoBotao}>Favoritos</Text>
+          </Pressable>
+        </View>
+        <View style={estilos.viewRodape}>
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoRodape,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="lock-closed"
+              size={18}
+              color="white"
+              style={{ marginRight: 7 }}
+            />
+            <Text style={estilos.textoRodape}>Privacidade</Text>
+          </Pressable>
+
+          <Pressable
+            style={({ pressed }) => [
+              estilos.botaoRodape,
+              pressed && { backgroundColor: "black" },
+            ]}
+          >
+            <Ionicons
+              name="information-circle"
+              size={18}
+              color="white"
+              style={{ marginRight: 7 }}
+            />
+            <Text style={estilos.textoRodape}>Sobre</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    </>
   );
 }
 
