@@ -1,15 +1,21 @@
-import { View, Text, Pressable, Image, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  Image,
+  StyleSheet,
+  Linking,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 // @ts-ignore
 import { Ionicons } from "@expo/vector-icons";
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 
 export default function index() {
   return (
     <>
-      <Stack.Screen options={{ headerShown: false }} />
-
+      <Stack.Screen options={{ headerShown: false, headerTitle: "Home" }} />
       <SafeAreaView style={estilos.container}>
         <View style={estilos.viewLogo}>
           <Image
@@ -19,66 +25,54 @@ export default function index() {
           <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
         </View>
         <View style={estilos.viewBotoes}>
-          <Pressable
-            style={({ pressed }) => [
-              estilos.botaoInicial,
-              pressed && { backgroundColor: "black" },
-            ]}
-          >
-            <Ionicons
-              name="search"
-              size={24}
-              color="white"
-              style={{ marginRight: 8 }}
-            />
-            <Text style={estilos.textoBotao}>Buscar Filmes</Text>
-          </Pressable>
+          <Link href="/buscar" asChild>
+            <Pressable style={estilos.botaoInicial}>
+              <Ionicons
+                name="search"
+                size={24}
+                color="white"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={estilos.textoBotao}>Buscar Filmes</Text>
+            </Pressable>
+          </Link>
 
-          <Pressable
-            style={({ pressed }) => [
-              estilos.botaoInicial,
-              pressed && { backgroundColor: "black" },
-            ]}
-          >
-            <Ionicons
-              name="star"
-              size={24}
-              color="yellow"
-              style={{ marginRight: 8 }}
-            />
-            <Text style={estilos.textoBotao}>Favoritos</Text>
-          </Pressable>
+          <Link href="/favoritos" asChild>
+            <Pressable style={estilos.botaoInicial}>
+              <Ionicons
+                name="star"
+                size={24}
+                color="yellow"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={estilos.textoBotao}>Favoritos</Text>
+            </Pressable>
+          </Link>
         </View>
         <View style={estilos.viewRodape}>
-          <Pressable
-            style={({ pressed }) => [
-              estilos.botaoRodape,
-              pressed && { backgroundColor: "black" },
-            ]}
-          >
-            <Ionicons
-              name="lock-closed"
-              size={18}
-              color="white"
-              style={{ marginRight: 7 }}
-            />
-            <Text style={estilos.textoRodape}>Privacidade</Text>
-          </Pressable>
+          <Link href="/privacidade" asChild>
+            <Pressable style={estilos.botaoRodape}>
+              <Ionicons
+                name="lock-closed"
+                size={18}
+                color="white"
+                style={{ marginRight: 7 }}
+              />
+              <Text style={estilos.textoRodape}> Privacidade</Text>
+            </Pressable>
+          </Link>
 
-          <Pressable
-            style={({ pressed }) => [
-              estilos.botaoRodape,
-              pressed && { backgroundColor: "black" },
-            ]}
-          >
-            <Ionicons
-              name="information-circle"
-              size={18}
-              color="white"
-              style={{ marginRight: 7 }}
-            />
-            <Text style={estilos.textoRodape}>Sobre</Text>
-          </Pressable>
+          <Link href="/sobre" asChild>
+            <Pressable style={estilos.botaoRodape}>
+              <Ionicons
+                name="information-circle"
+                size={18}
+                color="white"
+                style={{ marginRight: 7 }}
+              />
+              <Text style={estilos.textoRodape}>Sobre</Text>
+            </Pressable>
+          </Link>
         </View>
       </SafeAreaView>
     </>
@@ -138,6 +132,7 @@ const estilos = StyleSheet.create({
     bottom: 15,
   },
   botaoRodape: {
+    // backgroundColor: "yellow",
     paddingVertical: 14,
     paddingHorizontal: 16,
     borderRadius: 10,
