@@ -132,7 +132,6 @@ const estilos = StyleSheet.create({
     bottom: 15,
   },
   botaoRodape: {
-    // backgroundColor: "yellow",
     paddingVertical: 14,
     paddingHorizontal: 16,
     borderRadius: 10,
