@@ -4,6 +4,17 @@ Aplicativo desenvolvido utilizando React Native com Expo.
 
 ---
 
+## 04_telas-basicas-de-busca-e-resultados
+
+- Criação da versão básica das telas `Busca` e `resultados`
+- Uso do componente `TextInput` para entrada de dados na tela
+- Uso de state para gerenciar o filme digitado no campo de entrada
+- Validação básica usando `Alert` e `Vibration`
+- Navegação via programação com `useRouter` + passagem de parâmetros
+- Acesso aos parâmetros de rota com `useLocalSearchParams`
+
+---
+
 ## 03_navegação-expo-router-e-telas-privacidade-sobre
 
 - Instalação da lib `expo-router` e suas dependências
