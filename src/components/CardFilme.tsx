@@ -3,8 +3,13 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 
 // @ts-ignore
 import { Ionicons } from "@expo/vector-icons";
+import { CardFilmeProps } from "../types";
 
-export default function CardFilme() {
+export default function CardFilme({ filme }: CardFilmeProps) {
+  // Extraindo cada prop dentro do filme
+  const { id, title, poster_path } = filme;
+  console.log(id, title, poster_path);
+
   return (
     <View style={estilos.card}>
       {/* Imagem do filme... */}
