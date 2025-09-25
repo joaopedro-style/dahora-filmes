@@ -18,10 +18,7 @@ export default function index() {
       <Stack.Screen options={{ headerShown: false, headerTitle: "Home" }} />
       <SafeAreaView style={estilos.container}>
         <View style={estilos.viewLogo}>
-          <Image
-            source={require("../assets/dahora.png")}
-            style={estilos.logo}
-          />
+          <Image source={require("@/assets/dahora.png")} style={estilos.logo} />
           <Text style={estilos.tituloApp}>Dá Hora Filmes</Text>
         </View>
         <View style={estilos.viewBotoes}>

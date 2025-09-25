@@ -12,10 +12,7 @@ export default function Sobre() {
       />
       <SafeAreaView style={estilos.container}>
         <View style={estilos.card}>
-          <Image
-            source={require("../assets/dahora.png")}
-            style={estilos.logo}
-          />
+          <Image source={require("@/assets/dahora.png")} style={estilos.logo} />
           <Text style={estilos.titulo}>Dá Hora Filmes!</Text>
           <Text style={estilos.subtitulo}>Versão 1.0.0</Text>
           <Text style={estilos.paragrafo}>
