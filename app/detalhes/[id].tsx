@@ -13,8 +13,6 @@ export default function Detalhes() {
   // Convertendo a string do filme para um objeto
   const filme: FilmeDetalhes = JSON.parse(filmestring);
 
-  console.log(filme.title);
-
   return (
     <>
       <Stack.Screen
