@@ -15,8 +15,7 @@ export default function CardFilme({ filme }: CardFilmeProps) {
 
   const leiaMais = () => {
     router.push({
-      // pathname: "/detalhes/[id]",
-      pathname: `/detalhes/${id}`,
+      pathname: "/detalhes/[id]",
     });
   };
 
