@@ -60,3 +60,10 @@ export async function salvarFilmeFavorito(filme: Filme): Promise<boolean> {
   // Retorna true sinalizando que o filme foi salvo
   return true;
 }
+
+/**
+ * Chamar a função carregar e retornar a lista de favoritos
+ */
+export async function buscarFavoritos(): Promise<Filme[]> {
+  return carregar();
+}
