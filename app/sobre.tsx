@@ -1,6 +1,5 @@
 import { Stack } from "expo-router";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Sobre() {
   return (
@@ -10,7 +9,7 @@ export default function Sobre() {
           headerTitle: "Sobre o App",
         }}
       />
-      <SafeAreaView style={estilos.container}>
+      <View style={estilos.container}>
         <ScrollView>
           <View style={estilos.card}>
             <Image
@@ -47,7 +46,7 @@ export default function Sobre() {
             </Text>
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
