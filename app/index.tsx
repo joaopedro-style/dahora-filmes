@@ -67,7 +67,7 @@ export default function index() {
                 color="white"
                 style={{ marginRight: 7 }}
               />
-              <Text style={estilos.textoRodape}>Sobre</Text>
+              <Text style={estilos.textoRodape}>Sobre o app</Text>
             </Pressable>
           </Link>
         </View>
@@ -107,7 +107,7 @@ const estilos = StyleSheet.create({
     gap: 35,
   },
   botaoInicial: {
-    backgroundColor: "#5451a6",
+    backgroundColor: "#222",
     paddingVertical: 20,
     paddingHorizontal: 16,
     borderRadius: 10,
